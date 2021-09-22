@@ -1,0 +1,24 @@
+const sentence = "hello there from lighthouse labs";
+
+/*for (const char of sentence) {
+
+  setTimeout(() => {
+    process.stdout.write(char);
+    
+}, 1000) 
+}*/
+
+let i = 0;
+function fn() {
+    char = sentence.charAt(i++);
+    if(char === '') {
+      process.stdout.write("\n");
+      return;
+    }
+    process.stdout.write(char);
+
+    setTimeout(fn, 50);
+
+    
+}
+  setTimeout(fn, 50); 
